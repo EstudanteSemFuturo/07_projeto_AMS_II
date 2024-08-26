@@ -104,25 +104,6 @@
 
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-<<<<<<< HEAD
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
-=======
-    "skipLibCheck": true
-    
-  
-      {
-        "compilerOptions": {
-          "target": "es2016",
-          "module": "commonjs",
-          "rootDir": "./src",
-          "outDir": "./dist",
-          "esModuleInterop": true,
-          "forceConsistentCasingInFileNames": true,
-          "strict": true,
-          "skipLibCheck": true
-        },
-        "include": ["src/**/*"]
-      
->>>>>>> ff9fa45 (resolvido)
   }
 }
