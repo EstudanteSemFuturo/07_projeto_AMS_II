@@ -1,5 +1,9 @@
 {
   "devDependencies": {
+<<<<<<< HEAD
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+=======
     "@types/mysql": "^2.15.26",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
@@ -9,5 +13,6 @@
     "@types/node": "^22.5.0",
     "express": "^4.19.2",
     "mysql": "^2.18.1"
+>>>>>>> ff9fa45 (resolvido)
   }
 }
