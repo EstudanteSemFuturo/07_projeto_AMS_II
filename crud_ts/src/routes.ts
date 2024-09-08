@@ -47,6 +47,53 @@ router.get('/insere', (req, res) => {
   });
 });
 
+router.get('/leitura', (req, res) => {
+  const { identificador } = req.query;
+  
+  if (!identificador) {
+    return res.status(400).send('Id is required');
+  }
+  
+  connection.query('SELECT * FROM db_items WHERE id = ?', [identificador], (err, result) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(201).send(result);
+    }
+  });
+});
+
+router.get('/atualizar', (req, res) => {
+  const { identificador, name } = req.query;
+  
+  if (!identificador || !name) {
+    return res.status(400).send('Id and name are required');
+  }
+  
+  connection.query('UPDATE db_items WHERE id = ? SET name = ?', [identificador, name], (err, result) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(201).send(result);
+    }
+  });
+});
+
+router.get('/excluir', (req, res) => {
+  const { identificador } = req.query;
+  
+  if (!identificador) {
+    return res.status(400).send('Id is required');
+  }
+  
+  connection.query('DELETE * FROM db_items WHERE id = ?', [identificador], (err, result) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(201).send(result);
+    }
+  });
+});
 //Falta montar:
 //Rota GET para listar dados do banco de dados
 //Rota GET para atualizar dados no banco de dados
